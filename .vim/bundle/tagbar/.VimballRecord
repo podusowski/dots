@@ -1,0 +1,1 @@
+tagbar.vmb: call delete('/home/wolverine/.vim/bundle/tagbar/README.md')|call delete('/home/wolverine/.vim/bundle/tagbar/autoload/tagbar.vim')|call delete('/home/wolverine/.vim/bundle/tagbar/doc/tagbar.txt')|call delete('/home/wolverine/.vim/bundle/tagbar/plugin/tagbar.vim')|call delete('/home/wolverine/.vim/bundle/tagbar/syntax/tagbar.vim')
