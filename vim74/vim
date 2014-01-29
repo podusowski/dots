@@ -1,0 +1,5 @@
+#!/bin/bash
+
+root=`dirname $0`
+
+VIMRUNTIME=$root/runtime $root/vim-bin $@
