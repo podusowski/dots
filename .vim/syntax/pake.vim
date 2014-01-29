@@ -5,14 +5,16 @@ endif
 syn keyword pakeDirective       target set append configuration
 syn keyword pakeTargetType      application static_library phony
 syn keyword pakeArgument        sources link_with depends_on run_before run_after library_dirs include_dirs compiler_flags linker_flags artefacts prerequisites
-syn keyword pakeArgument        application_suffix compiler export archiver resources
+syn keyword pakeArgument        application_suffix compiler export archiver resources visible_in
 syn match pakeSpecialVariable   "__path"
 syn match pakeSpecialVariable   "__build"
 syn match pakeSpecialVariable   "__null"
 syn match pakeSpecialVariable   "__default"
+syn match pakeSpecialVariable   "__configuration"
+syn match pakeSpecialVariable   "__name"
 syn match pakeComment           "#.*$"
 syn match pakeIdentifier1       "$[^ )]*" contains=pakeSpecialVariable
-syn match pakeIdentifier2       "${[^ )]*}" contained
+syn match pakeIdentifier2       "${[^ )]*}" contained contains=pakeSpecialVariable
 syn region pakeString           start='"' end='"' contains=pakeIdentifier2
 
 hi def link pakeDirective        Statement
