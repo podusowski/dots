@@ -50,6 +50,24 @@ au Syntax * RainbowParenthesesLoadRound
 au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
 
+let g:rbpt_colorpairs = [
+    \ ['67',       'RoyalBlue3'],
+    \ ['66',    'SeaGreen3'],
+    \ ['65',    'DarkOrchid3'],
+    \ ['64',   'firebrick3'],
+    \ ['63',    'RoyalBlue3'],
+    \ ['62',     'SeaGreen3'],
+    \ ['61', 'DarkOrchid3'],
+    \ ['60',       'firebrick3'],
+    \ ['59',        'RoyalBlue3'],
+    \ ['58',       'SeaGreen3'],
+    \ ['57', 'DarkOrchid3'],
+    \ ['56',    'firebrick3'],
+    \ ['55',   'RoyalBlue3'],
+    \ ['54',    'SeaGreen3'],
+    \ ['53',     'DarkOrchid3'],
+    \ ['52',         'firebrick3'],
+    \ ]
 
 
 let mapleader=","
