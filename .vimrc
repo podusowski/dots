@@ -37,6 +37,8 @@ set expandtab
 set list
 set listchars=tab:>.,trail:.,extends:#,nbsp:.
 
+set wmh=0
+
 syntax on
 
 let mapleader=","
