@@ -14,11 +14,11 @@ hi Normal           guifg=#f6f3e8     guibg=black       gui=NONE      ctermfg=25
 hi NonText          guifg=#070707     guibg=black       gui=NONE      ctermfg=gray       ctermbg=NONE        cterm=NONE
 
 hi Cursor           guifg=black       guibg=white       gui=NONE      ctermfg=gray       ctermbg=250       cterm=reverse
-hi LineNr           guifg=#3D3D3D     guibg=black       gui=NONE      ctermfg=237         ctermbg=233        cterm=NONE
+hi LineNr           guifg=#3D3D3D     guibg=black       gui=NONE ctermfg=236 ctermbg=233 cterm=NONE
 
-hi VertSplit        guifg=#202020     guibg=#202020     gui=NONE      ctermfg=235         ctermbg=235           cterm=NONE
-hi StatusLine       guifg=#CCCCCC     guibg=#202020     gui=italic    ctermfg=white       ctermbg=58           cterm=BOLD
-hi StatusLineNC     guifg=black       guibg=#202020     gui=NONE      ctermfg=gray        ctermbg=235            cterm=NONE
+hi VertSplit        guifg=#202020     guibg=#202020     gui=NONE      ctermfg=black         ctermbg=black           cterm=NONE
+hi StatusLine       guifg=#CCCCCC     guibg=#202020     gui=italic ctermfg=white       ctermbg=12           cterm=bold
+hi StatusLineNC guifg=black guibg=#202020 gui=NONE ctermfg=246 ctermbg=233 cterm=bold
 
 hi Folded           guifg=#a0a8b0     guibg=#384048     gui=NONE      ctermfg=NONE        ctermbg=NONE        cterm=NONE
 hi Title            guifg=#f6f3e8     guibg=NONE        gui=bold      ctermfg=NONE        ctermbg=NONE        cterm=NONE
@@ -39,7 +39,7 @@ hi LongLineWarning  guifg=NONE        guibg=#371F1C     gui=underline ctermfg=NO
 hi ModeMsg          guifg=black       guibg=#C6C5FE     gui=BOLD      ctermfg=white       ctermbg=27    cterm=BOLD
 
 if version >= 700 " Vim 7.x specific colors
-  hi CursorLine     guifg=NONE        guibg=#121212     gui=NONE      ctermfg=NONE        ctermbg=233        cterm=BOLD
+  hi CursorLine     guifg=NONE        guibg=#121212     gui=NONE ctermfg=NONE        ctermbg=none        cterm=BOLD
   hi CursorColumn   guifg=NONE        guibg=#121212     gui=NONE      ctermfg=NONE        ctermbg=NONE        cterm=BOLD
   hi MatchParen     guifg=#f6f3e8     guibg=#857b6f     gui=BOLD      ctermfg=white       ctermbg=darkgray    cterm=NONE
   hi Pmenu          guifg=#f6f3e8     guibg=#444444     gui=NONE      ctermfg=NONE        ctermbg=60        cterm=NONE
