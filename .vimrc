@@ -43,6 +43,9 @@ syntax on
 
 let mapleader=","
 
+" change word under cursor: ,s
+nnoremap <Leader>s :%s/\<<C-r><C-w>\>/
+
 "
 " scripts
 "
