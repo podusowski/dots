@@ -41,6 +41,17 @@ set wmh=0
 
 syntax on
 
+
+
+" rainbow parentheses
+
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
+
+
+
 let mapleader=","
 
 " change word under cursor: ,s
