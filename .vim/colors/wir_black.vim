@@ -18,7 +18,7 @@ hi LineNr           guifg=#3D3D3D     guibg=black       gui=NONE ctermfg=236 cte
 
 hi VertSplit        guifg=#202020     guibg=#202020     gui=NONE      ctermfg=black         ctermbg=black           cterm=NONE
 hi StatusLine       guifg=#CCCCCC     guibg=#202020     gui=italic ctermfg=white       ctermbg=12           cterm=bold
-hi StatusLineNC guifg=black guibg=#202020 gui=NONE ctermfg=246 ctermbg=233 cterm=bold
+hi StatusLineNC guifg=black guibg=#202020 gui=NONE ctermfg=246 ctermbg=233 cterm=none
 
 hi Folded           guifg=#a0a8b0     guibg=#384048     gui=NONE      ctermfg=NONE        ctermbg=NONE        cterm=NONE
 hi Title            guifg=#f6f3e8     guibg=NONE        gui=bold      ctermfg=NONE        ctermbg=NONE        cterm=NONE
