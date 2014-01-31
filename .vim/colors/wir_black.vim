@@ -14,11 +14,13 @@ hi Normal           guifg=#f6f3e8     guibg=black       gui=NONE      ctermfg=25
 hi NonText          guifg=#070707     guibg=black       gui=NONE      ctermfg=gray       ctermbg=NONE        cterm=NONE
 
 hi Cursor           guifg=black       guibg=white       gui=NONE      ctermfg=gray       ctermbg=250       cterm=reverse
-hi LineNr           guifg=#3D3D3D     guibg=black       gui=NONE ctermfg=233 ctermbg=black cterm=NONE
+hi LineNr           guifg=#3D3D3D     guibg=black       gui=NONE ctermfg=234 ctermbg=232 cterm=none
 
-hi VertSplit        guifg=#202020     guibg=#202020     gui=NONE ctermfg=233 ctermbg=233           cterm=NONE
-hi StatusLine       guifg=#CCCCCC     guibg=#202020     gui=italic ctermfg=white       ctermbg=12           cterm=bold
-hi StatusLineNC guifg=black guibg=#202020 gui=NONE ctermfg=246 ctermbg=233 cterm=none
+hi VertSplit        guifg=#202020     guibg=#202020     gui=NONE ctermfg=black ctermbg=black           cterm=NONE
+"hi VertSplit        guifg=#202020     guibg=#202020     gui=NONE ctermfg=234 ctermbg=234           cterm=NONE
+hi StatusLine       guifg=#CCCCCC     guibg=#202020     gui=italic ctermfg=black ctermbg=12           cterm=none
+hi StatusLineNC guifg=black guibg=#202020 gui=NONE ctermfg=246 ctermbg=234 cterm=none
+"hi StatusLineNC guifg=black guibg=#202020 gui=NONE ctermfg=236 ctermbg=black cterm=underline
 
 hi Folded           guifg=#a0a8b0     guibg=#384048     gui=NONE      ctermfg=NONE        ctermbg=NONE        cterm=NONE
 hi Title            guifg=#f6f3e8     guibg=NONE        gui=bold      ctermfg=NONE        ctermbg=NONE        cterm=NONE
@@ -54,7 +56,7 @@ hi Number           guifg=#FF73FD     guibg=NONE        gui=NONE      ctermfg=da
 
 hi Keyword          guifg=#96CBFE     guibg=NONE        gui=NONE      ctermfg=118        ctermbg=NONE        cterm=NONE
 hi PreProc          guifg=#96CBFE     guibg=NONE        gui=NONE      ctermfg=30        ctermbg=NONE        cterm=NONE
-hi Conditional      guifg=#6699CC     guibg=NONE        gui=NONE      ctermfg=60        ctermbg=NONE        cterm=BOLD  " if else end
+hi Conditional      guifg=#6699CC     guibg=NONE        gui=NONE      ctermfg=60        ctermbg=NONE        cterm=none " if else end
 
 hi Todo             guifg=#8f8f8f     guibg=NONE        gui=NONE      ctermfg=red         ctermbg=NONE        cterm=BOLD
 hi Constant         guifg=#99CC99     guibg=NONE        gui=NONE      ctermfg=62        ctermbg=NONE        cterm=NONE
