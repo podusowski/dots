@@ -61,16 +61,16 @@ hi Constant         guifg=#99CC99     guibg=NONE        gui=NONE      ctermfg=62
 
 hi Identifier       guifg=#C6C5FE     guibg=NONE        gui=NONE      ctermfg=60        ctermbg=NONE        cterm=NONE
 hi Function         guifg=#FFD2A7     guibg=NONE        gui=NONE      ctermfg=brown       ctermbg=NONE        cterm=NONE
-hi Type             guifg=#FFFFB6     guibg=NONE        gui=NONE      ctermfg=130      ctermbg=NONE        cterm=BOLD
-hi Statement        guifg=#6699CC     guibg=NONE        gui=NONE      ctermfg=60         ctermbg=NONE        cterm=BOLD
+hi Type             guifg=#FFFFB6     guibg=NONE        gui=NONE      ctermfg=130      ctermbg=NONE        cterm=none
+hi Statement        guifg=#6699CC     guibg=NONE        gui=NONE      ctermfg=60         ctermbg=NONE        cterm=none
 
 hi Special          guifg=#E18964     guibg=NONE        gui=NONE      ctermfg=white       ctermbg=NONE        cterm=NONE
 hi Delimiter        guifg=#00A0A0     guibg=NONE        gui=NONE      ctermfg=62        ctermbg=NONE        cterm=NONE
 hi Operator         guifg=white       guibg=NONE        gui=NONE      ctermfg=white       ctermbg=NONE        cterm=NONE
 
 "NERDtree
-hi Directory ctermfg=60 cterm=BOLD
-hi NERDTreePart ctermfg=60 cterm=BOLD
+hi Directory ctermfg=60 cterm=none
+hi NERDTreePart ctermfg=60 cterm=none
 
 hi link Character       Constant
 hi link Boolean         Constant
