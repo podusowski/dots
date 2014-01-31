@@ -34,7 +34,7 @@ syn keyword cppStorageClass	mutable
 syn keyword cppStructure	class typename template namespace
 syn keyword cppNumber		NPOS
 syn keyword cppBoolean		true false
-syn keyword cppGoogle           ON_CALL EXPECT_CALL ASSERT_EQ ASSERT_FLOAT_EQ EXPECT_EQ EXPECT_FLOAT_EQ TEST TEST_F EXPECT_TRUE EXPECT_FALSE EXPECT_ANY_THROW
+syn keyword cppGoogle           ON_CALL EXPECT_CALL ASSERT_EQ ASSERT_FLOAT_EQ EXPECT_EQ EXPECT_FLOAT_EQ TEST TEST_F EXPECT_TRUE EXPECT_FALSE EXPECT_ANY_THROW WillOnce WillRepeatedly Return
 
 " The minimum and maximum operators in GNU C++
 syn match cppMinMax "[<>]?"
