@@ -12,12 +12,6 @@ if exists("b:current_syntax")
   finish
 endif
 
-if exists("g:ttcn_minlines")
-  exec "syn sync minlines=" . g:ttcn_minlines
-else
-  syn sync fromstart
-endif
-
 " Built-in types
 syn keyword ttcnType    address anytype boolean char default float integer
 syn keyword ttcnType    objid verdicttype timer set record union

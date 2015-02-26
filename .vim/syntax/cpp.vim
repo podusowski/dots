@@ -21,8 +21,9 @@ endif
 
 " C++ extentions
 syn keyword cppStatement	new delete this friend using
+syn match cppStd                "std::[a-zA-Z_]*"
 syn keyword cppAccess		public protected private
-syn keyword cppType		inline virtual explicit export bool wchar_t
+syn keyword cppType		inline virtual explicit export bool wchar_t override
 syn keyword cppExceptions	throw try catch
 syn keyword cppOperator		operator typeid
 syn keyword cppOperator		and bitor or xor compl bitand and_eq or_eq xor_eq not not_eq
@@ -53,6 +54,7 @@ if version >= 508 || !exists("did_cpp_syntax_inits")
   HiLink cppExceptions		Exception
   HiLink cppOperator		Comment
   HiLink cppStatement		Statement
+  HiLink cppStd                 cppStatement
   HiLink cppType		Type
   HiLink cppStorageClass	StorageClass
   HiLink cppStructure		Structure
