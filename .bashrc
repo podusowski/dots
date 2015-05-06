@@ -32,21 +32,20 @@ function vcs_status()
     local vcs_extra_info=$3
 
     local reset="\033[0m"
-    local bg1_to_bg2="\033[40;37m"
-    local bg1="\033[47;30m"
-    local bg2="\033[40;37m"
-    local to=◤
+    local bg1="\e[1;37;40m"
+    local bg2="\e[0;37;40m"
 
-    echo -n "\n${bg1} ⎇ $vcs_name $bg2 $vcs_info ${reset}\n"
+    #prompt_rectangle 47
+
+    echo -n "${bg1}⎇ $vcs_name $bg2 $vcs_info ${reset}"
 }
 
 function git_status()
 {
-    #local modified=`git status | grep modified | awk '{print $3}'`
-    local git_branch=$(git branch --no-color 2> /dev/null || echo "")
+    local git_branch=$(git branch --no-color 2> /dev/null | tr '\n' ' ' | sed 's/  //' || echo "")
 
     if [ -n "$git_branch" ]; then
-        vcs_status "GIT" "$git_branch"
+        vcs_status "git" "$git_branch"
     fi
 }
 
@@ -58,7 +57,7 @@ function svn_status()
         local svn_url=`echo "$svn_info" | grep URL | sed 's/URL: //'`
         local svn_revision=r`echo "$svn_info" | grep Revision: | sed 's/Revision: //'`
 
-        vcs_status "SVN" "$svn_url $svn_revision"
+        vcs_status "git" "$svn_url $svn_revision"
     fi
 }
 
@@ -71,11 +70,27 @@ function prompt_host()
 
 function prompt_tasks()
 {
+    echo -n "\e[0;35;40m"
+
     if [ `jobs -p | wc -l` -gt 0 ]; then
-        jobs | while read job ; do
-            echo -n "`echo $job | awk '{print $3}'` "
-        done
+        jobs | awk '
+                {
+                    printf "%-5s ", $1
+                    for (i=3;i<=NF;i++)
+                        printf "%s ", $i
+                }
+                '
     fi
+
+    echo -n -e "\033[0m"
+}
+
+function prompt_rectangle()
+{
+    local bg="\033[$1;1m"
+    local reset="\033[0m"
+
+    echo -n -e "$bg▶$reset"
 }
 
 function prompt_block()
@@ -96,23 +111,23 @@ function prompt_block()
 function prompt_command()
 {
     PS1="\n"
+    PS1+="`prompt_tasks`\n"
+
+    PS1+="\e[8;34;40m\u\033[0m "
+    if [ -n "$SSH_CLIENT" ]; then
+        PS1+="\e[8;36;40m\h\033[0m "
+    fi
+    PS1+="\e[1;34;40m\w\033[0m "
+
     PS1+=$(git_status)
     PS1+=$(svn_status)
-    #PS1+=$(background_tasks)
-    PS1+=$(prompt_block "`prompt_tasks`" 45 42)
-    if [ -n "$SSH_CLIENT" ]; then
-        PS1+=$(prompt_block '\u' 42 43)
-        PS1+=$(prompt_block '\h' 43 44)
-    else
-        PS1+=$(prompt_block '\u' 42 44)
-    fi
-    PS1+=$(prompt_block '\w' 44 0)
+
     PS1+="\n\$ "
 }
 
 PROMPT_COMMAND=prompt_command
 
-#▶▶▶▶◣
+#▶▶▶◣
 # ⎇ ⌥
 
 # enable color support of ls and also add handy aliases
