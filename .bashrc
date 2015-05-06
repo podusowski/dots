@@ -32,8 +32,8 @@ function vcs_status()
     local vcs_extra_info=$3
 
     local reset="\033[0m"
-    local bg1="\e[1;37;40m"
-    local bg2="\e[0;37;40m"
+    local bg1="\e[38;5;99m"
+    local bg2="\e[38;5;105m"
 
     #prompt_rectangle 47
 
@@ -70,7 +70,7 @@ function prompt_host()
 
 function prompt_tasks()
 {
-    echo -n "\e[0;35;40m"
+    echo -n "\e[38;5;238m"
 
     if [ `jobs -p | wc -l` -gt 0 ]; then
         jobs | awk '
@@ -113,11 +113,13 @@ function prompt_command()
     PS1="\n"
     PS1+="`prompt_tasks`\n"
 
-    PS1+="\e[8;34;40m\u\033[0m "
-    if [ -n "$SSH_CLIENT" ]; then
-        PS1+="\e[8;36;40m\h\033[0m "
-    fi
-    PS1+="\e[1;34;40m\w\033[0m "
+    PS1+="\e[38;5;27m\u\033[0m "
+    #if [ -n "$SSH_CLIENT" ]; then
+        PS1+="\e[38;5;37m@\033[0m"
+        PS1+="\e[38;5;31m\h\033[0m "
+    #fi
+    PS1+="\e[38;5;39m\w\033[0m "
+    #PS1+="\e[1;34;40m\w\033[0m "
 
     PS1+=$(git_status)
     PS1+=$(svn_status)
