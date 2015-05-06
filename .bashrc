@@ -32,8 +32,8 @@ function vcs_status()
     local vcs_extra_info=$3
 
     local reset="\033[0m"
-    local bg1="\e[38;5;99m"
-    local bg2="\e[38;5;105m"
+    local bg1="\e[38;5;239m"
+    local bg2="\e[38;5;237m"
 
     #prompt_rectangle 47
 
@@ -113,7 +113,7 @@ function prompt_command()
     PS1="\n"
     PS1+="`prompt_tasks`\n"
 
-    PS1+="\e[38;5;27m\u\033[0m "
+    PS1+="\e[38;5;36m\u\033[0m "
     #if [ -n "$SSH_CLIENT" ]; then
         PS1+="\e[38;5;37m@\033[0m"
         PS1+="\e[38;5;31m\h\033[0m "
