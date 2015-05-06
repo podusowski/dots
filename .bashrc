@@ -32,7 +32,7 @@ function vcs_status()
     local vcs_extra_info=$3
 
     local reset="\033[0m"
-    local bg1="\e[38;5;239m"
+    local bg1="\e[38;5;208m"
     local bg2="\e[38;5;237m"
 
     #prompt_rectangle 47
