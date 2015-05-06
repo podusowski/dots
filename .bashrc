@@ -57,7 +57,7 @@ function svn_status()
         local svn_url=`echo "$svn_info" | grep URL | sed 's/URL: //'`
         local svn_revision=r`echo "$svn_info" | grep Revision: | sed 's/Revision: //'`
 
-        vcs_status "git" "$svn_url $svn_revision"
+        vcs_status "svn" "$svn_url $svn_revision"
     fi
 }
 
