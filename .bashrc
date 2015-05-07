@@ -34,10 +34,11 @@ function vcs_status()
     local reset="\033[0m"
     local bg1="\e[38;5;208m"
     local bg2="\e[38;5;237m"
+    local bold="\e[1m"
 
     #prompt_rectangle 47
 
-    echo -n "${bg1}⎇ $vcs_name $bg2 $vcs_info ${reset}"
+    echo -n "$bold${bg1}⎇ $vcs_name $reset$bg2 $vcs_info ${reset}"
 }
 
 function git_status()
@@ -110,13 +111,17 @@ function prompt_block()
 
 function prompt_command()
 {
+    local bold="\e[1m"
+
     PS1="\n"
     PS1+="`prompt_tasks`\n"
 
     PS1+="\e[38;5;36m\u\033[0m "
     #if [ -n "$SSH_CLIENT" ]; then
-        PS1+="\e[38;5;37m@\033[0m"
-        PS1+="\e[38;5;31m\h\033[0m "
+        PS1+="$bold"
+        PS1+="\e[38;5;37m@"
+        PS1+="\e[38;5;31m\h "
+        PS1+="\e[0m"
     #fi
     PS1+="\e[38;5;39m\w\033[0m "
     #PS1+="\e[1;34;40m\w\033[0m "
