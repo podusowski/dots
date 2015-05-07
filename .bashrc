@@ -124,7 +124,7 @@ function prompt_command()
         PS1+="\e[0m"
 
     if [ -n "$SSH_CLIENT" ]; then
-        PS1+="\e[38;5;36m [ssh]"
+        PS1+="\e[38;5;36m[ssh] "
     fi
     #fi
     PS1+="\e[38;5;39m\w\033[0m "
