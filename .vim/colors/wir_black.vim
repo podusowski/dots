@@ -10,11 +10,11 @@ let colors_name = "wir_black"
 "hi Example         guifg=NONE        guibg=NONE        gui=NONE      ctermfg=NONE        ctermbg=NONE        cterm=NONE
 
 " General colors
-hi Normal           guifg=#f6f3e8     guibg=black       gui=NONE      ctermfg=252         ctermbg=NONE        cterm=NONE
+hi Normal           guifg=#f6f3e8     guibg=black       gui=NONE      ctermfg=252        ctermbg=NONE        cterm=NONE
 hi NonText          guifg=#070707     guibg=black       gui=NONE      ctermfg=gray       ctermbg=NONE        cterm=NONE
 
 hi Cursor           guifg=black       guibg=white       gui=NONE      ctermfg=gray       ctermbg=250       cterm=reverse
-hi LineNr           guifg=#3D3D3D     guibg=black       gui=NONE ctermfg=234 ctermbg=232 cterm=none
+hi LineNr           guifg=#3D3D3D     guibg=black       gui=NONE      ctermfg=238        ctermbg=232       cterm=none
 
 hi VertSplit        guifg=#202020     guibg=#202020     gui=NONE ctermfg=black ctermbg=black           cterm=NONE
 "hi VertSplit        guifg=#202020     guibg=#202020     gui=NONE ctermfg=234 ctermbg=234           cterm=NONE
@@ -68,7 +68,7 @@ hi Statement        guifg=#6699CC     guibg=NONE        gui=NONE      ctermfg=60
 
 hi Special          guifg=#E18964     guibg=NONE        gui=NONE      ctermfg=white       ctermbg=NONE        cterm=NONE
 hi Delimiter        guifg=#00A0A0     guibg=NONE        gui=NONE      ctermfg=62        ctermbg=NONE        cterm=NONE
-hi Operator         guifg=white       guibg=NONE        gui=NONE      ctermfg=white       ctermbg=NONE        cterm=NONE
+hi Operator         guifg=white       guibg=NONE        gui=NONE      ctermfg=white       ctermbg=NONE        cterm=bold
 
 "NERDtree
 hi Directory ctermfg=60 cterm=none
