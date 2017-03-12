@@ -221,3 +221,9 @@ let g:autoclose_on = 1
 " after result are visible
 set scrolloff=3
 
+set encoding=utf-8
+
+augroup css
+    autocmd!
+    autocmd FileType scss,css,html setlocal iskeyword+=-
+augroup END
