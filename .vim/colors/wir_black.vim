@@ -62,8 +62,8 @@ hi Todo             guifg=#8f8f8f     guibg=NONE        gui=NONE      ctermfg=re
 hi Constant         guifg=#99CC99     guibg=NONE        gui=NONE      ctermfg=62        ctermbg=NONE        cterm=NONE
 
 hi Identifier       guifg=#C6C5FE     guibg=NONE        gui=NONE      ctermfg=60        ctermbg=NONE        cterm=NONE
-hi Function         guifg=#FFD2A7     guibg=NONE        gui=NONE      ctermfg=brown       ctermbg=NONE        cterm=NONE
-hi Type             guifg=#FFFFB6     guibg=NONE        gui=NONE      ctermfg=130      ctermbg=NONE        cterm=none
+hi Function         guifg=#FFD2A7     guibg=NONE        gui=NONE      ctermfg=31        ctermbg=NONE        cterm=bold
+hi Type             guifg=#FFFFB6     guibg=NONE        gui=NONE      ctermfg=72      ctermbg=NONE        cterm=bold
 hi Statement        guifg=#6699CC     guibg=NONE        gui=NONE      ctermfg=60         ctermbg=NONE        cterm=none
 
 hi Special          guifg=#E18964     guibg=NONE        gui=NONE      ctermfg=white       ctermbg=NONE        cterm=NONE
