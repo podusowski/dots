@@ -213,7 +213,7 @@ set guioptions-=r  "remove right-hand scroll bar
 set guioptions-=l  "remove right-hand scroll bar
 
 set t_Co=256
-colorscheme wir_black
+colorscheme atom-dark-256
 
 let g:autoclose_on = 1
 
